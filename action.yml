@@ -2,9 +2,15 @@ name: Checkout Ingrid Actions
 description: Checkouts Ingrid actions repository
 
 inputs:
+  github-token:
+    description: A Github token
+    default: ${{ env.GH_TOKEN }}
   path:
     description: The path where the actions should be checked out
     default: "ingrid-actions"
+  ref:
+    description: The revision of the ingrid-actions you are trying to checkout
+    default: ""
 
 runs:
   using: "composite"
@@ -13,5 +19,6 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: shipwallet/github-actions
-        token: ${{ env.GH_TOKEN }}
+        token: ${{ inputs.github-token }}
         path: ${{ inputs.path }}
+        ref: ${{ inputs.ref }}
