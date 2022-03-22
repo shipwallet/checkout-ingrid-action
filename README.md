@@ -14,10 +14,6 @@ The repository where the actions are stored is a private repository within our O
 ```yaml
 - uses: shipwallet/checkout-ingrid-actions@v1
   with:
-    # GitHub token which has access to clone the private repo in the Organization
-    # Default: This takes by default the value of the environment variables named as `GH_TOKEN`.
-    github-token: ''
-    
     # Path where the code should be checked out
     # Default: ingrid-actions
     path: ''
