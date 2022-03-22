@@ -16,6 +16,6 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: shipwallet/github-actions
-        token: ${{ env.GH_TOKEN }}
+        token: ${{ env.GH_TOKEN_SW_BOT }}
         path: ${{ inputs.path }}
         ref: ${{ inputs.ref }}

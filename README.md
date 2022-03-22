@@ -8,7 +8,7 @@ The repository where the actions are stored is a private repository within our O
 
 # Usage
 
-This action uses an environment variable name `GH_TOKEN` to authenticate and checkout the private repo.
+This action uses an environment variable name `GH_TOKEN_SW_BOT` to authenticate and checkout the private repo.
 
 <!-- start usage -->
 ```yaml
