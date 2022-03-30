@@ -5,13 +5,21 @@ inputs:
   path:
     description: The path where the actions should be checked out
     default: "ingrid-actions"
+    required: false
   ref:
     description: The revision of the ingrid-actions you are trying to checkout
     default: ""
+    required: false
 
 runs:
   using: "composite"
   steps:
+    - name: Checkout Application Repo
+      uses: actions/checkout@v3
+      with:
+        repository: shipwallet/${{ env.APPLICATION }}
+        token: ${{ env.GH_TOKEN_SW_BOT }}
+        path: ${{ env.APPLICATION }}
     - name: Checkout Ingrid Actions Repo
       uses: actions/checkout@v3
       with:
