@@ -12,6 +12,17 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Setup Environment Variables
+      shell: bash
+      run: |
+        echo "GOPRIVATE=github.com/shipwallet" >> $GITHUB_ENV
+        full_repo="${{ github.repository }}"
+
+        repository=${full_repo//shipwallet\//''}
+        echo $repository
+
+        echo "REPOSITORY=$repository" >> $GITHUB_ENV
+
     - name: Checkout Ingrid Actions Repo
       uses: actions/checkout@v3
       with:
