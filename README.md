@@ -1,5 +1,7 @@
 # Checkout Ingrid Actions
 
+**This action is now deprecated. Please use [this one](https://github.com/shipwallet/setup-ingrid-context) instead.**
+
 **This is a public repository**
 
 This repo contains the GitHub Action used to download the latest version of our custom actions.
